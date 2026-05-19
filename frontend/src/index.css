@@ -1,0 +1,39 @@
+/*
+ * Tailwind v4 — uma única linha importa tudo (substitui o
+ * @tailwind base/components/utilities da v3).
+ */
+@import "tailwindcss";
+
+/*
+ * Tema do CLUB12.
+ * No Tailwind v4 definimos cores/fontes via @theme em CSS, em vez
+ * de tailwind.config.js. Cada token vira utilitário automaticamente:
+ *   --color-brand-500  →  bg-brand-500, text-brand-500, border-brand-500
+ */
+@theme {
+  /* Verdes (paleta da marca) */
+  --color-brand-600: #065F46;   /* verde principal */
+  --color-brand-500: #10B981;   /* verde destaque */
+  --color-brand-50:  #F0F9F0;   /* branco suave */
+
+  /* Cinzas / fundo escuro */
+  --color-surface-900: #1F2937; /* fundo principal */
+  --color-surface-800: #273345; /* cards */
+  --color-surface-700: #374151; /* bordas/divisores */
+
+  /* Fontes */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Reset/base: aplicamos dark mode "for free" deixando o body já escuro */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-surface-900);
+  color: var(--color-brand-50);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
