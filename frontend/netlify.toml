@@ -1,0 +1,23 @@
+# Configuração do Netlify para o frontend Vite + React.
+# Documentação: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Onde o Netlify roda npm install / npm run build.
+  base = "frontend"
+  command = "npm run build"
+  # Pasta gerada pelo Vite (relativa ao base).
+  publish = "dist"
+
+[build.environment]
+  # Travamos versão do Node para evitar surpresa em deploys futuros.
+  NODE_VERSION = "20"
+
+# --- SPA fallback ---
+# Sem isso, acessar https://club12.netlify.app/classificacao direto
+# retornaria 404 (não existe arquivo /classificacao no build).
+# Esta regra diz: qualquer rota → entregue o index.html, e deixe o
+# React Router decidir o que renderizar no cliente.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
