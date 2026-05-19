@@ -13,9 +13,11 @@ Plataforma de futebol fullstack com jogos ao vivo, classificações e perfis de 
 
 ## Demonstração
 
-| Home | Classificação | Detalhe do time |
-|---|---|---|
-| _( um print aqui)_ | _( um print aqui)_ | _( um print aqui)_ |
+![Home com jogos do dia e partida ao vivo](docs/screenshots/home-ao-vivo.png)
+
+| Classificação | Detalhe do time |
+|---|---|
+| ![Tabela do Brasileirão com Palmeiras na liderança](docs/screenshots/classificacao-brasileirao.png) | ![Página do Real Madrid com elenco](docs/screenshots/time-real-madrid.png) |
 
 ---
 
