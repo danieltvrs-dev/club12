@@ -7,6 +7,9 @@ Plataforma de futebol fullstack com jogos ao vivo, classificações e perfis de 
 ![node](https://img.shields.io/badge/node-18%2B-green)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
+> 🌐 **Demo ao vivo:** _(URLs serão adicionadas após o primeiro deploy)_
+> Frontend hospedado no Netlify, backend no Render. Primeira visita pode demorar ~30s porque o plano gratuito do Render dorme após inatividade.
+
 > 🔌 **Multi-provider:** o projeto usa **duas APIs gratuitas em paralelo**, a API-Football para jogos do dia, times e elencos, e a football-data.org especificamente para classificações da temporada atual. Decisão arquitetural intencional: cada fonte é usada onde seu plano gratuito é mais generoso.
 
 ---
@@ -174,6 +177,41 @@ npm run dev
 ```
 
 Frontend roda em `http://localhost:5173`.
+
+---
+
+## Deploy em produção
+
+O projeto está pronto para deploy em duas plataformas gratuitas:
+
+### Backend no Render
+
+1. Crie conta em https://render.com (sem cartão)
+2. Clique em **New +** → **Blueprint**
+3. Aponte para este repositório do GitHub
+4. O Render lê o `render.yaml` na raiz e cria o serviço `club12-api`
+5. Na tela seguinte, preencha as variáveis de ambiente:
+   - `API_FOOTBALL_KEY`: sua chave da API-Football
+   - `FOOTBALL_DATA_KEY`: seu token da football-data.org
+   - `FRONTEND_ORIGINS`: `https://<seu-app>.netlify.app` (a URL do Netlify, separada por vírgula se quiser somar localhost)
+6. Confirme e espere o primeiro build (~3 minutos)
+
+> Plano gratuito do Render dorme após 15 minutos de inatividade. A primeira requisição pós-soneca demora ~30s.
+
+### Frontend no Netlify
+
+1. Crie conta em https://netlify.com (login com GitHub)
+2. **Add new site** → **Import an existing project** → escolha este repo
+3. As configurações de build vêm do `frontend/netlify.toml` automaticamente, não precisa preencher nada
+4. Em **Site settings** → **Environment variables**, adicione:
+   - `VITE_API_URL`: URL do backend no Render (ex.: `https://club12-api.onrender.com`)
+5. Trigger um novo deploy (botão **Trigger deploy** → **Deploy site**)
+
+### Verificação
+
+- Abra a URL do Netlify
+- A Home deve carregar os jogos (pode demorar na primeira vez por causa da soneca do Render)
+- Navegue para `/classificacao` e `/times/541` digitando direto na URL: graças ao redirect no `netlify.toml`, devem funcionar
 
 ---
 
