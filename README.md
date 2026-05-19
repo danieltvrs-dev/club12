@@ -212,9 +212,27 @@ club12/
 │   ├── src/
 │   ├── .env.example
 │   └── package.json
+├── docs/
+│   └── screenshots/      capturas usadas neste README
 ├── .gitignore
 └── README.md
 ```
+
+---
+
+## Mais telas
+
+Filtro de ligas funcionando em outras competições:
+
+| Premier League | La Liga |
+|---|---|
+| ![Premier League](docs/screenshots/classificacao-premier.png) | ![La Liga](docs/screenshots/classificacao-laliga.png) |
+
+Busca de times e últimos jogos:
+
+| Busca de times | Últimos jogos do time |
+|---|---|
+| ![Busca de times](docs/screenshots/busca-flamengo.png) | ![Últimos jogos](docs/screenshots/ultimos-jogos-real-madrid.png) |
 
 ---
 
