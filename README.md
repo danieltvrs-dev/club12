@@ -7,7 +7,7 @@ Plataforma de futebol fullstack — jogos ao vivo, classificações e perfis de 
 ![node](https://img.shields.io/badge/node-18%2B-green)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
-> 🔌 **Multi-provider:** o projeto usa **duas APIs gratuitas em paralelo** — a API-Football para jogos do dia, times e elencos, e a football-data.org especificamente para classificações da temporada atual. Decisão arquitetural intencional: cada fonte é usada onde seu plano gratuito é mais generoso.
+> 🔌 **Multi-provider:** o projeto usa **duas APIs gratuitas em paralelo**, a API-Football para jogos do dia, times e elencos, e a football-data.org especificamente para classificações da temporada atual. Decisão arquitetural intencional: cada fonte é usada onde seu plano gratuito é mais generoso.
 
 ---
 
@@ -15,7 +15,7 @@ Plataforma de futebol fullstack — jogos ao vivo, classificações e perfis de 
 
 | Home | Classificação | Detalhe do time |
 |---|---|---|
-| _(adicione um print aqui)_ | _(adicione um print aqui)_ | _(adicione um print aqui)_ |
+| _( um print aqui)_ | _( um print aqui)_ | _( um print aqui)_ |
 
 ---
 
