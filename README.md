@@ -1,6 +1,6 @@
 # CLUB12
 
-Plataforma de futebol fullstack — jogos ao vivo, classificações e perfis de times — construída como projeto de portfólio.
+Plataforma de futebol fullstack com jogos ao vivo, classificações e perfis de times. Projeto pessoal.
 
 ![status](https://img.shields.io/badge/status-MVP-success)
 ![python](https://img.shields.io/badge/python-3.13-blue)
@@ -109,7 +109,7 @@ Todas as páginas:
 
 ---
 
-## Decisões técnicas (para recrutadores)
+## Decisões técnicas
 
 | Decisão | Por quê |
 |---|---|
@@ -225,4 +225,4 @@ MIT — sinta-se à vontade para usar como referência ou base.
 ## Créditos
 
 Dados fornecidos por [API-Football](https://www.api-football.com/).
-Construído como projeto de aprendizado e portfólio.
+Projeto pessoal de aprendizado.
