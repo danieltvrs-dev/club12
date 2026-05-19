@@ -1,0 +1,32 @@
+# Render Blueprint — Infrastructure as Code
+# Documentação: https://render.com/docs/blueprint-spec
+#
+# Para usar: faça login em https://dashboard.render.com,
+# clique em "New +" > "Blueprint" e aponte para este repositório.
+# Render lê este arquivo e cria o serviço automaticamente.
+
+services:
+  - type: web
+    name: club12-api
+    runtime: python
+    region: oregon
+    plan: free          # 750h/mês, dorme após 15min sem uso
+    rootDir: backend    # nosso backend está em backend/
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    # Endpoint que Render usa para verificar saúde do app após deploy.
+    # Já implementamos /health no main.py.
+    healthCheckPath: /health
+    envVars:
+      # Chaves de API — sync: false significa "vou preencher no
+      # dashboard manualmente" (porque são segredos).
+      - key: API_FOOTBALL_KEY
+        sync: false
+      - key: FOOTBALL_DATA_KEY
+        sync: false
+      # Origens permitidas pelo CORS (será a URL do Netlify + localhost).
+      - key: FRONTEND_ORIGINS
+        sync: false
+      # Forçamos Python 3.13 para alinhar com o ambiente de desenvolvimento.
+      - key: PYTHON_VERSION
+        value: 3.13.7
