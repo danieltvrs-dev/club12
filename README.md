@@ -7,8 +7,9 @@ Plataforma de futebol fullstack com jogos ao vivo, classificações e perfis de 
 ![node](https://img.shields.io/badge/node-18%2B-green)
 ![license](https://img.shields.io/badge/license-MIT-lightgrey)
 
-> 🌐 **Demo ao vivo:** _(URLs serão adicionadas após o primeiro deploy)_
-> Frontend hospedado no Netlify, backend no Render. Primeira visita pode demorar ~30s porque o plano gratuito do Render dorme após inatividade.
+> 🌐 **Demo ao vivo:** **https://club12.netlify.app**
+> Frontend no Netlify, backend ([API](https://club12-api.onrender.com)) no Render.
+> A primeira visita pode demorar até 1 minuto: o plano gratuito do Render hiberna o backend após 15min de inatividade e leva alguns segundos para acordar.
 
 > 🔌 **Multi-provider:** o projeto usa **duas APIs gratuitas em paralelo**, a API-Football para jogos do dia, times e elencos, e a football-data.org especificamente para classificações da temporada atual. Decisão arquitetural intencional: cada fonte é usada onde seu plano gratuito é mais generoso.
 
